@@ -1,0 +1,41 @@
+/*
+SQLyog - Free MySQL GUI v5.15
+Host - 5.0.83-community-nt : Database - healthshareabe
+*********************************************************************
+Server version : 5.0.83-community-nt
+*/
+
+SET NAMES utf8;
+
+SET SQL_MODE='';
+
+create database if not exists `healthshareabe`;
+
+USE `healthshareabe`;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO';
+
+/*Table structure for table `patientdetails` */
+
+DROP TABLE IF EXISTS `patientdetails`;
+
+CREATE TABLE `patientdetails` (
+  `name` varchar(50) default NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) default NULL,
+  `age` varchar(50) default NULL,
+  `symptom` varchar(50) default NULL,
+  `disease` varchar(50) default NULL,
+  `idproof` varchar(50) default NULL,
+  `mobile` varchar(50) default NULL,
+  `emailid` varchar(50) default NULL,
+  `mk` varchar(50) default NULL,
+  `pk` varchar(50) default NULL,
+  PRIMARY KEY  (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `patientdetails` */
+
+insert into `patientdetails` (`name`,`username`,`password`,`age`,`symptom`,`disease`,`idproof`,`mobile`,`emailid`,`mk`,`pk`) values ('aaa','aaaa','aaa','24','stomach pain','Cancer','12345678','9632587414','ask@gmail.com','{1,117649.0}','{7,7.0,7.0,2.876231009252021E248}');
+insert into `patientdetails` (`name`,`username`,`password`,`age`,`symptom`,`disease`,`idproof`,`mobile`,`emailid`,`mk`,`pk`) values ('Selva','selva','java','25','stomach pain','Cancer','12345678','9965330590','dselvait@gmail.com','{1,64.0}','{2,2.0,2.0,1.6777216E7}');
+
+SET SQL_MODE=@OLD_SQL_MODE;
